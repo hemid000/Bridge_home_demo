@@ -1,0 +1,172 @@
+#nav {
+  .upside_nav {
+    @include _main($display: flex, $align_it: center);
+    border-bottom: 1px solid rgb(238, 238, 238);
+    padding: 0 0 3px 0;
+    .upside {
+      @include _main($display: flex, $align_it: center);
+      .left_side {
+        @include _main($width: 100%, $display: flex, $align_it: center);
+        h3 {
+          @include _main($f_size: 13px, $margin: 0px);
+          font-weight: 600;
+        }
+        .icons {
+          @include _main($f_size: 13px, $margin: 0 0 0 16px, $display: flex);
+          gap: 15px;
+          .bi {
+            cursor: pointer;
+          }
+        }
+      }
+      .right_side {
+        @include _main($width: 100%, $display: flex, $align_it: center);
+        .left_item {
+          @include _main(
+            $width: 100%,
+            $display: flex,
+            $align_it: center,
+            $just_content: end
+          );
+          ul {
+            @include _main(
+              $display: flex,
+              $align_it: center,
+              $margin: 0 0 0 0,
+              $padding: 0 0 0 0
+            );
+            list-style: none;
+            gap: 20px;
+            li {
+              list-style: none;
+              color: black;
+              a {
+                font-size: 12px;
+                font-weight: 600;
+                text-decoration: none;
+                color: black;
+                transition: 0.3s ease-in-out;
+                &:hover {
+                  color: red;
+                }
+              }
+            }
+            #call {
+              a {
+                color: black;
+                &:hover {
+                  color: black;
+                }
+              }
+            }
+            #num {
+              margin-left: -8px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .down_side {
+    margin-top: 16px;
+    .upside {
+      @include _main($display: flex, $align_it: center);
+      .left_side {
+        @include _main($width: 110px, $height: 93px);
+        img {
+          @include _main($width: 100%, $height: 100%, $object_f: contain);
+        }
+      }
+      .right_side {
+        @include _main($display: flex, $align_it: center, $just_content: end);
+        ul {
+          @include _main(
+            $display: flex,
+            $align_it: center,
+            $margin: 0 0 0 0,
+            $padding: 0 0 0 0
+          );
+          list-style: none;
+          gap: 32px;
+          li {
+            list-style: none;
+            color: black;
+            a {
+              font-size: 14px;
+              font-weight: 400;
+              text-decoration: none;
+              color: rgb(93, 93, 93);
+              transition: 0.1s ease-in-out;
+              &:hover {
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+#nav2 {
+  display: none;
+  .nav_side {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .icon {
+      display: flex;
+      align-items: center;
+    }
+    .img {
+      width: 12%;
+      height: 100px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .icon {
+      font-size: 21px;
+    }
+  }
+  .list {
+    // position: absolute;
+    // top: 116px;
+    // left: 0px;
+    // right: 0px;
+    width: 100%;
+    display: none;
+    ul {
+      display: flex;
+      padding: 0px 0px 20px 50px;
+      flex-direction: column;
+      gap: 10px;
+      background-color: white;
+      list-style: none;
+      margin: 0px;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          font-size: 14px;
+          color: black;
+        }
+      }
+    }
+  }
+  .active {
+    display: block;
+  }
+
+  @media (max-width: 1000px) {
+    display: block;
+  }
+}
